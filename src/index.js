@@ -4,12 +4,13 @@ import './index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
-import App from './App';
+// import App from './Home/App';
 import reportWebVitals from './reportWebVitals';
+import Login from './Login/Login.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,5 @@
 .navbar-nav.ml-auto.nav-flex-icons {
-    padding-right: 20px;
+    padding-right: 6%;
 }
 
 .mb-1.navbar.navbar-expand-sm {
@@ -13,39 +13,6 @@
     float: right;
 }
 
-.form-inline.d-flex.justify-content-center.md-form.form-sm.active-cyan-2.mt-4 {
-    display: inline;
-    width: 200%;
-    padding: 0px;
-    margin-left: 20%;
-    font-size: 18px;
-}
-
-.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
-    border: 1px solid #1a237e;
-    box-shadow: 1px 1px 0 0 #1a237e;
-    border-radius: 50px;
-    font-size: small;
-    padding-left: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-.active-cyan-2 .fas {
-    color: #1a237e;
-    margin-top: 5px;
-}
-
-.active-cyan-2 input.form-control[type=text]::placeholder {
-    font-size: small;
-    padding-left: 20px;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-
-}
 #avatar {
     width: 30px;
     height: 30px;
@@ -56,12 +23,6 @@
 
 #buttonProfile {
     outline: none;
-}
-
-#avaModal {
-    width: 100px;
-    height: 100px;
-    margin-left: 40%;
 }
 
 .notification {
@@ -78,4 +39,69 @@
 
 #navbarDropdownMenuLink-55 {
     color: #1a237e;
+}
+
+.avatar-pic {
+    width: 100px;
+    height: 100px;
+}
+.file-field
+{
+    margin: auto auto;
+}
+.modal-header .close{
+    margin:0;
+    padding: 0;
+}
+
+.modal-header label
+{
+    padding: 5px;
+    padding-right: 5px;
+    margin: 5px;
+    text-transform: none;
+}
+.tbl-update-profile td
+{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.tbl-update-profile
+{
+
+    width: 100%;
+}
+.radio-gender
+{
+    padding-left: 30px;
+}
+.tbl-update-profile td+td
+{
+    border-left: 1px solid whitesmoke;
+}
+.update-profile-notification
+{
+    color:red;
+    text-align:center;
+}
+.change-pass-notification
+{
+    color:red;
+    text-align:center;   
+}
+.width-300 {
+    width: 300px;
+}
+
+.bold-text {
+    display: inline;
+    font-weight: bold;
+}
+
+.btn-noti {
+    height: 100%;
+    padding: 4px 10px 0px 10px !important;
+    font-size: 15px;
 }

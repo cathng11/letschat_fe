@@ -1,0 +1,115 @@
+/*------------------  Right bar ------------------*/
+
+.right-bar {
+
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border: solid 1px rgb(206, 206, 206);
+  height: 88vh;
+}
+
+#avaReceiver {
+  width: 120px;
+  height: 120px;
+  margin-top: 5%;
+  object-fit: cover;
+}
+.card
+{
+  width: 100%;
+  height: 100%;
+}
+
+.right-bar .name-receiver {
+  display: block;
+  margin-top: 10px;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.status-activity {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+
+
+.info-member {
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.info-member:hover {
+  cursor: pointer;
+  background-color:#d0d6e2 ;
+  border-radius: 5px;
+}
+
+.info-member:active {
+  background-color:#eceff1;
+  border: solid 0px;
+
+}
+
+.info-member img {
+  width: 34px;
+  height: 34px;
+}
+
+.info-member div {
+  width: 80%;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.info-member .name-receiver {
+  font-size: 15px;
+  margin: 5px;
+  padding-left: 10px;
+}
+
+.right-bar h5 {
+  height: 35%;
+}
+
+.right-bar h5 div {
+  height: 100%;
+}
+.add-new-member i
+{
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  
+}
+.add-new-member:active
+{
+  background-color: rgb(235, 231, 231);
+  border: solid 0px;
+  cursor: pointer;
+}
+.add-new-member
+{
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+.add-new-member:hover
+{
+  border: solid 0px;
+  cursor: pointer;
+}
+.txt-side-bar
+{
+  font-size: 14px;
+  margin-left: 5%;
+  color: grey;
+  font-weight: bold;
+}
