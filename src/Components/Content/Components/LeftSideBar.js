@@ -21,10 +21,12 @@ class LeftSideBar extends Component {
             listContact: [],
             listMessages: [],
             listGroup: [],
-            currentForm: 'formSearch'
+            currentForm: 'formSearch',
+            btnEnabled: false
         }
     }
     onShowList = (list) => {
+        this.setState({btnEnabled: false});
         if (list === 'ListContact') {
             this.setState({
                 DisplayList: 'ListContact',
@@ -48,6 +50,7 @@ class LeftSideBar extends Component {
             this.getListGroup('');
             // this.getListContact('');
         }
+        this.setState({btnEnabled: true});
     }
     onShowInfo = async (username) => {
         var list;
@@ -115,6 +118,9 @@ class LeftSideBar extends Component {
         this.getListMessages('');
         this.getListContact('');
         this.getListGroup('');
+        this.setState({
+            btnEnabled: true
+        })
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps) {
@@ -180,6 +186,7 @@ class LeftSideBar extends Component {
                     />
                     <button
                         className="row btn new-event"
+                        disabled = {this.state.btnEnabled ? "" :"disabled"}
                         data-toggle="modal"
                         onClick={this.setCurrentForm}
                         data-target={this.state.modalNewAction}>

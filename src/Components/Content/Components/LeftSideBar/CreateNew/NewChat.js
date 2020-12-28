@@ -75,7 +75,7 @@ export default class NewChat extends Component {
                                         aria-label="Search" />
                                 </div>
                                 <span className="txt-side-bar ml-0">PEOPLE</span>
-                                <div className="result-search ml-1 mb-3">
+                                <div className="result-search ml-1 mb-3 ModalNewChat-people">
                                     {showResult}
                                 </div>
                             </div>

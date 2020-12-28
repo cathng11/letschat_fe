@@ -1,5 +1,5 @@
 export async function getListContact(data) {
-    const response = await fetch('http://localhost:3070/api/contact', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: data })
@@ -8,7 +8,7 @@ export async function getListContact(data) {
 }
 
 export async function getListMessages(data) {
-    const response = await fetch('http://localhost:3070/api/listMessages', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/listMessages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: data })
@@ -17,7 +17,7 @@ export async function getListMessages(data) {
 }
 export async function getListGroup(data) {
 
-    const response = await fetch('http://localhost:3070/api/listGroup', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/listGroup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: data })
@@ -26,7 +26,7 @@ export async function getListGroup(data) {
 }
 export async function getInfoMemGroup(ID_Room) {
 
-    const response = await fetch('http://localhost:3070/api/listGroup/info', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/listGroup/info', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ info: ID_Room })
@@ -35,7 +35,7 @@ export async function getInfoMemGroup(ID_Room) {
 }
 export async function checkRegister(data) {
 
-    const response = await fetch('http://localhost:3070/api/register', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user: data })
@@ -44,7 +44,7 @@ export async function checkRegister(data) {
 }
 //Api login
 export async function login(data) {
-    const response = await fetch('http://localhost:3070/api/login', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: data[0], password: data[1], timeOnline: data[2], check: data[3] })
@@ -54,7 +54,7 @@ export async function login(data) {
 
 //Lay tin nhan chat giua 2 user
 export async function getMessages(data) {
-    const response = await fetch('http://localhost:3070/api/messages', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ idRoom: data })
@@ -64,7 +64,7 @@ export async function getMessages(data) {
 
 //Add message
 export async function addMessage(data) {
-    const response = await fetch('http://localhost:3070/api/messages/add', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/messages/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: data[0], idRoom: data[1], message: data[2], time: data[3] })
@@ -74,7 +74,7 @@ export async function addMessage(data) {
 //update user profile
 export async function updateUserProfile(user) {
 
-    const response = await fetch('http://localhost:3070/api/user/update', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/user/update', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user: user })
@@ -84,7 +84,7 @@ export async function updateUserProfile(user) {
 //change password
 export async function changePass(oldpass,newpass, username) {
 
-    const response = await fetch('http://localhost:3070/api/user/updatePass', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/user/updatePass', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ oldpass: oldpass,newpass: newpass, username: username })
@@ -94,7 +94,7 @@ export async function changePass(oldpass,newpass, username) {
 //search user through phone number
 export async function searchUser(phone) {
 
-    const response = await fetch('http://localhost:3070/api/user/search', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/user/search', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone:phone })
@@ -104,7 +104,7 @@ export async function searchUser(phone) {
 //Check if isFriend
 export async function checkStatusFr(user1,user2) {
 
-    const response = await fetch('http://localhost:3070/api/friend', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/friend', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user1: user1,user2:user2 })
@@ -114,7 +114,7 @@ export async function checkStatusFr(user1,user2) {
 //Insert friend
 export async function sendRequest(id,sender,receiver,time) {
 
-    const response = await fetch('http://localhost:3070/api/friend/add', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/friend/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id:id,sender:sender,receiver:receiver,time:time })
@@ -125,7 +125,7 @@ export async function sendRequest(id,sender,receiver,time) {
 //insert tbl_chatroom
 export async function createChatRoom(id,name,avatar) {
 
-    const response = await fetch('http://localhost:3070/api/chatroom/add', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/chatroom/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id:id,name:name,avatar:avatar})
@@ -135,7 +135,7 @@ export async function createChatRoom(id,name,avatar) {
 //update tbl_chatroom
 export async function updateRoom(id,avatar) {
 
-    const response = await fetch('http://localhost:3070/api/chatroom/update', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/chatroom/update', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id:id,avatar:avatar})
@@ -145,7 +145,7 @@ export async function updateRoom(id,avatar) {
 //get tbl_chatroom
 export async function getInfoRoom(id) {
 
-    const response = await fetch('http://localhost:3070/api/chatroom', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/chatroom', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id:id})
@@ -155,7 +155,7 @@ export async function getInfoRoom(id) {
 //insert tbl_participants
 export async function addParticipants(id,id_room,list) {
 
-    const response = await fetch('http://localhost:3070/api/participants/add', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/participants/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id:id,id_room:id_room,list:list})
@@ -166,7 +166,7 @@ export async function addParticipants(id,id_room,list) {
 //get participants
 export async function getListMembers(idRoom) {
 
-    const response = await fetch('http://localhost:3070/api/participants', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/participants', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({idRoom:idRoom})
@@ -175,7 +175,7 @@ export async function getListMembers(idRoom) {
 }
 //Api notifications
 export async function getNotifications(data) {
-    const response = await fetch('http://localhost:3070/api/notifications', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/notifications', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({username: data})
@@ -186,7 +186,7 @@ export async function getNotifications(data) {
 //data = [sender, receiver, isFriend] -> isFriend: accept: 0 || deny: 1
 //Accept FR
 export async function acceptFriendRequest(data) {
-    const response = await fetch('http://localhost:3070/api/friend/accept', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/friend/accept', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({data: data})
@@ -196,7 +196,7 @@ export async function acceptFriendRequest(data) {
 
 //Read notification
 export async function readNotification(data) {
-    const response = await fetch('http://localhost:3070/api/notifications/read', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/notifications/read', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({username: data})
@@ -206,7 +206,7 @@ export async function readNotification(data) {
 
 //Api logout
 export async function logout(data) {
-    const response = await fetch('http://localhost:3070/api/login/logout', {
+    const response = await fetch('https://letschat-bb.herokuapp.com/api/login/logout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: data[0], time: data[1]})

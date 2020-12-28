@@ -58,3 +58,19 @@
   {
     border-radius: 5px;
   }
+
+  #ModalNewChat, #ModalNewGroupChat {
+    height: 100%;
+  }
+  
+  .ModalNewChat-people {
+    height: 300px;
+    overflow-y: scroll;
+  }
+  
+  .ModalNewGroupChat-people {
+    height: 200px;
+    overflow-y: scroll;
+    z-index: -1;
+  }
+  

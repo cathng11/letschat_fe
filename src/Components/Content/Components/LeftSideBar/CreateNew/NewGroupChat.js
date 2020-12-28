@@ -89,7 +89,7 @@ export default class NewGroupChat extends Component {
                 })
                 if(this.state.notification==='Create group successfully')
                 {
-                    this.socket = io('localhost:3070');
+                    this.socket = io('https://shrouded-castle-36016.herokuapp.com/');
                      this.socket.emit('creategroup',{id:this.state.id_room,user:this.props.infoUser.Username})
                 }
             })
@@ -202,7 +202,7 @@ export default class NewGroupChat extends Component {
                                             placeholder="Search"
                                             aria-label="Search" />
                                     </div>
-                                    <div className="result-search ml-1 mb-3">
+                                    <div className="result-search ml-1 mb-3 ModalNewGroupChat-people">
                                         {showResult}
                                     </div>
                                 </div>

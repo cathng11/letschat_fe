@@ -15,6 +15,7 @@ export default class Register extends Component {
     }
     onRegister = (event) => {
         event.preventDefault();
+        var check = this.checkInput();
         if(this.checkInput()===true)
         {
             this.checkRegister(this.state);
@@ -22,15 +23,21 @@ export default class Register extends Component {
         else
         {
             this.setState({
-                notification: "Confirm password doesn't match"
+                notification: check
             })
         }
     }
     checkInput=()=>
     {
-        var {pass,confirmPass}=this.state;
-        if(pass!==confirmPass) return false;
-        else return true;
+        var {username, pass,confirmPass}=this.state;
+        var countUsername = username.split(' ');
+        if (countUsername.length > 1) return "Username must not contain spaces";
+        var countPass = pass.split(' ');
+        if (countPass.length > 1) return "Password must not contain spaces";
+        if (pass.length < 8) return "Password must be at least 8 characters";
+        if (pass !== confirmPass) 
+            return  "Confirm password doesn't match";
+        return true;
     }
     checkRegister=(data)=>
     {
@@ -44,9 +51,13 @@ export default class Register extends Component {
     }
     onHandleChange=(event)=>
     {
+        this.setState({notification: ""});
 		var target=event.target;
 		var names=target.name;
-		var values=target.value;
+        var values=target.value;
+        var count = values.split(' ');
+        if (count.length > 1) this.setState({notification: "Contain spaces"});
+        if (names === 'pass' && values.length < 8) this.setState({notification: "Password must be at least 8 characters"});
 		this.setState({
 			[names]: values
         });
