@@ -17,7 +17,7 @@ class Content extends Component {
         this.socket = null;
     }
     componentDidMount() {
-        this.socket = io('http://localhost:3070/');
+        this.socket = io('https://letschat-bb.herokuapp.com/');
         this.socket.emit('joinUser', this.props.username);
         this.socket.on('onShowNewMessage', (response) => { this.setState({ onReload: !this.state.onReload }) });
         this.socket.on('to-friend-reloadHeader', (response) => this.reloadHeader());

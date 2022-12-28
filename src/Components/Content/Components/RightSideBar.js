@@ -117,7 +117,7 @@ class RightSideBar extends Component {
         await updateRoom(this.props.infoGroup.ID_Room, this.state.avaGr)
             .then(res => {
                 if (res.results === 'Updated') {
-                    this.socket = io('http://localhost:3070/');
+                    this.socket = io('https://letschat-bb.herokuapp.com/');
                     this.socket.emit('updateroom', { id: this.props.infoGroup.ID_Room, user: this.props.username })
                 }
             })
@@ -167,7 +167,7 @@ class RightSideBar extends Component {
                             <span className="name-receiver"><h5><strong>{showInfo.Firstname === '' && showInfo.Lastname === '' ?
                                 showInfo.Username : showInfo.Firstname + " " + showInfo.Lastname}</strong></h5></span>
                             {isFriend ? <span className="status-activity">
-                                {showInfo.TimeOnline !== null && showInfo.TimeOffline === null ? 'Offline' : 'Online'}</span> : ''}
+                            {(showInfo.Time_Online !== null && showInfo.Time_Offline === null) ? 'Online' : 'Offline'}</span> : ''}
 
                         </div>
 
