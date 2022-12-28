@@ -89,7 +89,7 @@ export default class NewGroupChat extends Component {
                 })
                 if(this.state.notification==='Create group successfully')
                 {
-                    this.socket = io('https://shrouded-castle-36016.herokuapp.com/');
+                    this.socket = io('http://localhost:3070/');
                      this.socket.emit('creategroup',{id:this.state.id_room,user:this.props.infoUser.Username})
                 }
             })

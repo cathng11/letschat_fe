@@ -117,7 +117,7 @@ class RightSideBar extends Component {
         await updateRoom(this.props.infoGroup.ID_Room, this.state.avaGr)
             .then(res => {
                 if (res.results === 'Updated') {
-                    this.socket = io('https://shrouded-castle-36016.herokuapp.com/');
+                    this.socket = io('http://localhost:3070/');
                     this.socket.emit('updateroom', { id: this.props.infoGroup.ID_Room, user: this.props.username })
                 }
             })

@@ -55,7 +55,7 @@ class ConvGroup extends Component {
             })
     }
     componentDidMount() {
-        this.socket = io('https://letschat-bb.herokuapp.com/');
+        this.socket = io('http://localhost:3070/');
         this.socket.emit('joinRoom', this.props.id);
         this.socket.on('newMessage', (response) => { this.newMessage(response) });
         this.getChat();
